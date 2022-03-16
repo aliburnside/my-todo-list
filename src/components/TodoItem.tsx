@@ -5,13 +5,19 @@ interface Props {
 }
 
 const TodoItem: React.FC<Props> = ({ todo }) => {
-  //const handleDeleteTodo = () = {};
+  const HandleDeleteTodo = () => {};
 
   return (
     <div>
       <input type="checkbox"></input>
       {todo.text}
-      <button className="DeleteTodo" onClick={() => {}}>
+      <button
+        className="DeleteTodo"
+        onClick={(e) => {
+          e.preventDefault();
+          HandleDeleteTodo();
+        }}
+      >
         -
       </button>
     </div>
