@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import TodoInputForm from "./components/TodoInputForm";
+import TodoList from "./components/TodoList";
 
 import "./App.css";
 
 const initialTodo: Todo[] = [
   {
-    text: "Learn AWS",
+    text: "Make a Todo List",
   },
 ];
 
@@ -22,6 +23,7 @@ function App() {
       <header className="App-header">
         <div>Todo List</div>
         <TodoInputForm addTodo={addTodo} />
+        <TodoList todo={todo} />
       </header>
     </div>
   );
